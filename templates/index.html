@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="UTF-8">
+<title>YOUTUBE ANALYSIS</title>
+{% endblock %}
+
+{% block body %}
+<img src="https://i.ibb.co/M6SQvB6/Youtube-Scraper.png" alt="Youtube Scraper" width="100%" height="200">
+
+<center>
+    <div style="max-width :100%; background : white; height:100%;">
+        <br>
+<h1 style = "font-family:Georgia; font-size:36px">Enter your Youtube link to start scraping</h1>
+        <br>
+        <form action="/youtube_path"  method = "POST">
+            <table>
+                <tr >
+                    <td >
+                        <table >
+                            <tr >
+                                <td style="font-size:22px">
+                                    Youtube Video Link
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                   <input type="text" name ='url' id ='url' size="50" style="height:30px;font-size:16px">
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="submit" style="font-size:20px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            </form>
+
+
+        <br>
+        <br>
+
+<a href="/list_channel" style="font-size:22px"> CLICK HERE TO SEE THE ALREADY SAVED DATA</a>
+        <br>
+        <br>
+        </div>
+</center>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="UTF-8">
+<title>VIDEOS</title>
+{% endblock %}
+
+{% block body %}
+<img src="https://i.ibb.co/M6SQvB6/Youtube-Scraper.png" alt="Youtube Scraper" width="100%" height="200">
+
+<center>
+    <div style="max-width :100%; background : white">
+        <br>
+    <h1 style="font-family:Georgia, font-size:36px">COMMENTS ON VIDEO </h1>
+    <table>
+      <tr>
+        <th style="font-size:20px">
+          Comment Author
+        </th>
+        <th style="font-size:20px">
+          Comment
+        </th>
+      </tr>
+
+      {% for i in var%}
+
+        <tr>
+          <td style="padding :5px;font-size:17px;text-align: center;">
+            {{i['author']}}
+          </td>
+          <td style="padding :8px;font-size:17px;">
+            {{i['comment_text']}}
+          </td>
+        </tr>
+
+
+      {%endfor%}
+    </table>
+{% endblock %}

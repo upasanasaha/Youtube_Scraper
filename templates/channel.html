@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="UTF-8">
+<title>CHANNELS </title>
+{% endblock %}
+
+
+
+{% block body %}
+<img src="https://i.ibb.co/M6SQvB6/Youtube-Scraper.png" alt="Youtube Scraper" width="100%" height="200">
+
+<center>
+    <div style="max-width :100%; background : white">
+        <br>
+<h1 style = "font-family:Georgia; font-size:36px">CHANNEL LIST </h1>
+        <table style="padding: 0px; ">
+            <tr>
+                <th style="padding: 20px; font-size:19px">
+                    CHANNEL NAME
+                </th>
+                <th style="padding: 20px; font-size:19px">
+                     TOTAL VIEWS
+                </th >
+                <th style="padding: 20px;font-size:19px">
+                    TOTAL SUBSCRIBER
+                </th>
+                <th style="padding: 20px;font-size:19px">
+                    TOTAL VIDEOS
+                </th>
+            </tr>
+
+        {% for i in var%}
+
+            <div>
+            <tr>
+                <td style="padding: 5px;font-size:19px;text-align: center;">
+            <a href="{{i['channelid']}}" style="padding: 20px;">   {{i['channel_name']}} </a>
+
+                </td>
+
+                                <td style="padding-left: 20px; text-align: center; font-size:19px">
+                   {{i['view_count']}}
+
+                </td>
+                                <td style="padding-left: 20px;text-align: center; font-size:19px">
+                   {{i['subscriber_count']}}
+
+                </td>
+                               <td style="padding-left: 20px;text-align: center;font-size:19px">
+                   {{i['videocount']}}
+
+                </td>
+
+            </tr>
+                </div>
+
+
+
+        {%endfor%}
+        </table>
+{% endblock %}

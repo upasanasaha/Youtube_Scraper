@@ -1,0 +1,20 @@
+login.log
+Procfile
+*.idea/
+*idea/
+*idea
+# Byte-compiled / optimized / DLL files
+*__pycache__/
+*.py[cod]
+*$py.class
+artifact
+*.pyc
+*.xml
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
