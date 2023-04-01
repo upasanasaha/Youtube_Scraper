@@ -12,9 +12,6 @@ import os
 import logging
 logging.basicConfig(filename="login.log", level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
-}
 
 try:
     mongoDB_url='mongodb+srv://UpasanaSaha:11$Upcellent@cluster0.7hozwpx.mongodb.net/?retryWrites=true&w=majority'
