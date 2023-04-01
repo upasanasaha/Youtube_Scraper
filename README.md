@@ -1,5 +1,5 @@
 # Youtube Scraper
-![image](https://i.ibb.co/M6SQvB6/Youtube-Scraper.png)
+![image](Youtube_Scraper.png)
 
 ### How to run
 
@@ -19,8 +19,10 @@ pip install -r requirements.txt
 ```
 ### Step 4 - Edit mongoDB_url in app.py file and give your MongoDB connection url.
 
+### Step 4 - Edit api_ky in app.py file and give your Youtube v3 api key.
+
 ### Step 5 - Run app.py file
 ```bash
 python app.py
 ```
-### Step 5 - Open in browser: http://localhost:5001/
+### Step 5 - Open in browser: http://localhost:8000/

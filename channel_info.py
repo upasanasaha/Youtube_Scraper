@@ -28,12 +28,4 @@ def get_channel_stats(youtube, channel_id):
         logging.info(f"the channel info are {channel_info}")
         return channel_info
     except Exception as e:
-        logging.error(f"An error occured when retirving info {e}")
-
-
-if __name__=='__main__':
-    from googleapiclient.discovery import build
-    api_key = 'AIzaSyAfaCUAHOR6eGTV8E5LwKV9h31PZyjAaH4'
-    Youtube_Scraper = build('youtube', 'v3', developerKey=api_key)
-    print(Youtube_Scraper)
-    print(get_channel_stats(Youtube_Scraper,'UCNU_lfiiWBdtULKOw6X0Dig'))
+        logging.error(f"An error occurred when retrieving info {e}")

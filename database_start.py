@@ -10,10 +10,10 @@ def get_database():
 
     '''
     try:
-        mydb = connection.connect(host='localhost',  user='root', passwd='11upcellent', use_pure=True)
+        mydb = connection.connect(host='localhost',  user='root', passwd='root123', use_pure=True)
         cursor = mydb.cursor()
         cursor.execute('Create database youtube;')
-        mydb = connection.connect(host='localhost', database='youtube', user='root', passwd='11upcellent', use_pure=True)
+        mydb = connection.connect(host='localhost', database='youtube', user='root', passwd='root123', use_pure=True)
         query1 = 'Create Table channel_info(channel_ID varchar(50) NOT NULL, channel_name varchar(100), playlist varchar(50), view_count bigint, subscriber_count bigint, video_count bigint);'
         query2 = 'Create Table video_info( video_title varchar(100), video_view bigint, video_likes bigint, comment_count bigint, thumbnail_url varchar(300), video_url varchar(300), video_id varchar(50) NOT NULL,channel_id varchar(50));'
         cursor = mydb.cursor()
@@ -24,7 +24,7 @@ def get_database():
 
     except Exception as e:
         try:
-            mydb = connection.connect(host='localhost', database='youtube', user='root', passwd='11upcellent',use_pure=True)
+            mydb = connection.connect(host='localhost', database='youtube', user='root', passwd='root123',use_pure=True)
             query1 = 'Create Table channel_info(channel_ID varchar(50) NOT NULL, channel_name varchar(100), playlist varchar(50), view_count bigint, subscriber_count bigint, video_count bigint);'
             query2 = 'Create Table video_info( video_title varchar(100), video_view bigint, video_likes bigint, comment_count bigint, thumbnail_url varchar(300), video_url varchar(300), video_id varchar(50) NOT NULL,channel_id varchar(50));'
             cursor = mydb.cursor()

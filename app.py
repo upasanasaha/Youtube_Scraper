@@ -18,7 +18,7 @@ headers = {
 
 try:
     mongoDB_url=os.getenv("MONGO_DB_URL")
-    api_key = 'AIzaSyAfaCUAHOR6eGTV8E5LwKV9h31PZyjAaH4'
+    api_key = os.getenv("YOUTUBE_API_KY")
     Youtube_Scraper = build('youtube', 'v3', developerKey=api_key)
     #mydb, cursor = get_database() cant use because heroku will not support
     client = pymongo.MongoClient(mongoDB_url)
@@ -175,5 +175,5 @@ def image(path):
         return render_template('error.html')
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=50001, debug=True)
+    app.run(host='127.0.0.1', port=8000, debug=True)
 	#app.run(debug=True)
