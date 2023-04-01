@@ -18,7 +18,7 @@ headers = {
 
 try:
     mongoDB_url=os.getenv("MONGO_DB_URL")
-    api_key = os.getenv("YOUTUBE_API_KY")
+    api_key = 'AIzaSyAfaCUAHOR6eGTV8E5LwKV9h31PZyjAaH4'
     Youtube_Scraper = build('youtube', 'v3', developerKey=api_key)
     #mydb, cursor = get_database() cant use because heroku will not support
     client = pymongo.MongoClient(mongoDB_url)
