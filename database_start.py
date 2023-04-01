@@ -36,7 +36,3 @@ def get_database():
             cursor = mydb.cursor()
             logging.info("Connection established.")
     return mydb, cursor
-
-if __name__=='__main__':
-    mydb, cursor = get_database()
-    print(mydb,cursor)
