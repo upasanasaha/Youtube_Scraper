@@ -12,6 +12,7 @@ import os
 import logging
 logging.basicConfig(filename="login.log", level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
+app = Flask(__name__)
 
 try:
     mongoDB_url='mongodb+srv://UpasanaSaha:11$Upcellent@cluster0.7hozwpx.mongodb.net/?retryWrites=true&w=majority'
@@ -30,8 +31,6 @@ class channel:
     channel_id = ''
 
 obj_ytube = channel()
-
-app = Flask(__name__)
 
 @app.route('/',methods=['GET'])  # route to display the home page
 def homePage():
@@ -172,5 +171,5 @@ def image(path):
         return render_template('error.html')
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=5000, debug=True)
-	#app.run(debug=True)
+    #app.run(host='127.0.0.1', port=5000, debug=True)
+	app.run(debug=True)
