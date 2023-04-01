@@ -25,4 +25,4 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
-### Step 5 - Open in browser: http://localhost:8000/
+### Step 5 - Open in browser: http://localhost:5000/
